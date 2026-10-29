@@ -1,56 +1,48 @@
-# Usman Ghias
+# Alternative Products on Quotations
 
-Metadata repository for the private repo: alternative_product. Odoo Alternative Product in Sale Order
+![Odoo](https://img.shields.io/badge/Odoo-17.0-714B67) ![Editions](https://img.shields.io/badge/Editions-Community%2C_Enterprise%2C_Odoo.sh-2563EB) ![License](https://img.shields.io/badge/License-OPL--1-0F766E) [![Odoo App Store](https://img.shields.io/badge/Odoo_App_Store-Buy-875A7B)](https://apps.odoo.com/apps/modules/17.0/alternative_sale)
 
-> Portfolio showcase for a private/proprietary implementation. The production source is **not** included in this repository.
+When an item is out of stock or over budget, sales staff need to offer a substitute without rebuilding the quotation. This app lets you list alternative products on a variant and swap one into a quotation line in two clicks, with the price taken from the quotation's pricelist.
 
-## Overview
+## What it does
 
-`alternative_product` is documented here as a professional case study. This repository contains portfolio metadata and high-level documentation only.
+- Define alternative products on each product variant
+- Alternative button on quotation lines in the Quotation and Quotation Sent stages
+- Wizard to pick the substitute, with the line price recomputed from the pricelist
+- Button hidden once the order is confirmed, so confirmed orders are not changed by accident
+- Access controlled by a user group
 
-## Problem solved
+## How to use it
 
-Metadata repository for the private repo: alternative_product. Odoo Alternative Product in Sale Order
+1. Add the users who may swap products to the Alternative Products group.
+2. On a product variant, list its alternatives.
+3. On a quotation line, click Alternative and choose the replacement.
 
-## Key capabilities
+## Screenshots
 
-- Business-process customization aligned to operational needs
-- Integration with standard Odoo apps where applicable
-- Practical UI and workflow improvements for end users
+![Alternative Products on Quotations screenshot 1](screenshots/1.png)
+![Alternative Products on Quotations screenshot 2](screenshots/2.png)
+![Alternative Products on Quotations screenshot 3](screenshots/3.png)
+![Alternative Products on Quotations screenshot 4](screenshots/4.png)
+![Alternative Products on Quotations screenshot 5](screenshots/5.png)
+![Alternative Products on Quotations screenshot 6](screenshots/6.png)
 
-## Technology and Odoo version
+## Technical notes
 
-- Stack: Odoo, Python, ERP customization
-- Repository type: portfolio case study / documentation
-- Related module/project name: `alternative_product`
+Technical name `alternative_sale`, Odoo 17.0.
 
-## My contribution
+Extends `sale.order`, `sale.order.line` and the alternative wizard of `pt_alternative_base` (Alternative Product Base by Praj Technologies). Depends on `sale_management` and `stock`.
 
-Architecture, development, customization, integration, testing, and delivery support for the underlying implementation (as applicable to this project).
+> Requires `pt_alternative_base` by Praj Technologies. The Odoo App Store adds it to the purchase automatically.
 
-## Architecture at a high level
+## Get the module
 
-Standard Odoo/ERP extension patterns: module metadata, business models, views/actions, and workflow customization layered on core Odoo apps. Exact proprietary implementation details are intentionally omitted.
+Buy it on the [Odoo App Store](https://apps.odoo.com/apps/modules/17.0/alternative_sale) for EUR 14, including the required base module. The purchase includes the full source code under the OPL-1 licence.
 
-## Screenshots or demo
-
-Screenshots are available on request. Any shared visuals must be anonymized and used only with permission.
-
-## Source availability
-
-The production implementation lives in a private repository because it contains proprietary and/or client-specific work, configuration, or assets.
-
-This repository must not be treated as an open-source release of the production codebase.
-
-## License and attribution
-
-Documentation in this showcase repository is provided for portfolio demonstration. Third-party trademarks and product names remain the property of their owners. This README does **not** relicense any private source code.
-
-## Contact
-
-- GitHub: https://github.com/UsmanGhias
-- Profile / portfolio repositories under the same account
+Need it on another Odoo version, with changes for your workflow, or installed and tested on Odoo.sh? Email [iusmanghias@gmail.com](mailto:iusmanghias@gmail.com?subject=alternative_sale%20customisation) or see [CODCrafters](https://codcrafters.org).
 
 ---
 
-Status: Portfolio showcase (documentation only)
+This repository is the product page. The module source is private and comes with the licence.
+
+Built by [Usman Ghias](https://usmanghias.co.uk), [CODCrafters](https://codcrafters.org).
